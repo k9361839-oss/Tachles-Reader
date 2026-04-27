@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מה זה AI - הורדת תוסף</title>
+    <title>Tachles Reader - קצר ולעניין</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -22,19 +22,19 @@
         }
 
         .hero-gradient {
-            background: radial-gradient(circle at top right, #f8fafc 0%, #ffffff 50%, #f1f5f9 100%);
+            background: radial-gradient(circle at top right, #f0f7ff 0%, #ffffff 50%, #f9fafb 100%);
         }
 
         .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
         }
 
         .card-hover:hover {
             transform: translateY(-10px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
 
-        .floating {
+        .floating-animation {
             animation: floating 3s ease-in-out infinite;
         }
 
@@ -43,83 +43,64 @@
             50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
-
-        .step-number {
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 overflow-x-hidden">
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden">
 
     <!-- Navbar -->
-    <nav class="sticky top-0 z-50 glass-effect border-b border-slate-100">
+    <nav class="sticky top-0 z-50 glass-effect border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="bg-indigo-600 text-white p-2.5 rounded-xl shadow-indigo-200 shadow-lg">
-                    <i class="fas fa-brain text-xl"></i>
+            <div class="flex items-center gap-2">
+                <div class="bg-blue-600 text-white p-2 rounded-lg shadow-lg">
+                    <i class="fas fa-bolt text-xl"></i>
                 </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-black tracking-tight text-indigo-900 leading-none">מה זה AI</span>
-                    <span class="text-xs text-slate-500 font-medium mt-1">ללא צורך ב-API</span>
-                </div>
+                <span class="text-2xl font-extrabold tracking-tight text-blue-900">קצר ולעניין</span>
             </div>
-            <a href="https://mitmachim.top/user/%D7%99.%D7%A8.%D7%A7" target="_blank" class="text-indigo-600 font-bold hover:text-indigo-800 transition-all flex items-center gap-2 group">
-                <span class="hidden md:inline">פותח ע"י י.ר.ק</span>
-                <i class="fas fa-user-circle text-xl group-hover:rotate-12 transition-transform"></i>
+            <a href="https://mitmachim.top/user/%D7%99.%D7%A8.%D7%A7" target="_blank" class="text-blue-600 font-semibold hover:text-blue-800 transition-colors flex items-center gap-2">
+                <i class="fas fa-code"></i>
+                פותח ע"י י.ר.ק
             </a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-gradient pt-24 pb-32 px-6">
+    <section class="hero-gradient pt-20 pb-32 px-6">
         <div class="max-w-5xl mx-auto text-center">
-            <div class="inline-flex items-center gap-2 px-4 py-2 mb-8 text-sm font-bold tracking-wide text-indigo-700 uppercase bg-indigo-50 rounded-full border border-indigo-100">
-                <i class="fas fa-sparkles"></i>
-                <span>הסבר מיידי לכל מושג</span>
+            <div class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-blue-600 uppercase bg-blue-50 rounded-full">
+                תוסף Chrome חדשני 2026
             </div>
-            <h1 class="text-6xl md:text-8xl font-black text-slate-900 mb-8 leading-tight tracking-tighter">
-                תפסיקו לנחש, <br>
-                <span class="text-indigo-600">פשוט תדעו.</span>
+            <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-8 leading-tight">
+                תפסיקו לקרוא הכל, <br>
+                <span class="text-blue-600 underline decoration-blue-200 underline-offset-8">תתחילו להבין הכל.</span>
             </h1>
-            <p class="text-xl md:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-                הדרך המהירה ביותר להבין כל מושג! סימון מילה ולחיצה ימנית יציגו לכם הסבר מדויק מהמכלול או ממאגר ידע חכם.
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+                הכלי שיעזור לכם לחסוך זמן יקר ברשת. אנחנו מסננים את הרעשים ומגישים לכם רק את מה שחשוב – בתכל'ס.
             </p>
             
-            <div class="flex flex-col items-center gap-6">
-                <a href="https://github.com/k9361839-oss/my-landing-.page/raw/refs/heads/master/plugin.rar" class="group relative inline-flex items-center justify-center px-12 py-6 font-black text-xl text-white transition-all duration-300 bg-indigo-600 rounded-2xl shadow-2xl shadow-indigo-200 hover:bg-indigo-700 hover:-translate-y-1 active:translate-y-0 overflow-hidden">
-                    <div class="absolute inset-0 bg-white/10 group-hover:left-full transition-all duration-700 -left-full skew-x-12"></div>
-                    <i class="fas fa-cloud-arrow-down ml-4 group-hover:animate-bounce"></i>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                <a href="https://github.com/k9361839-oss/Tachles-Reader/raw/refs/heads/main/Tachles%20Reader.rar" class="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white transition-all duration-200 bg-blue-600 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 shadow-xl hover:bg-blue-700">
+                    <i class="fas fa-download ml-3 group-hover:animate-bounce"></i>
                     הורד את התוסף עכשיו (ZIP)
                 </a>
-                <div class="flex items-center gap-4 text-slate-400 font-medium">
-                    <span class="flex items-center gap-1"><i class="fas fa-shield-check text-green-500"></i> גרסה 2026</span>
-                    <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
-                    <span>100% חינם</span>
-                </div>
+                <span class="text-sm text-gray-400">גרסה 2.4 | חינם לקהילה</span>
             </div>
 
-            <!-- Visual Preview Card -->
-            <div class="mt-20 relative max-w-4xl mx-auto">
-                <div class="absolute -inset-4 bg-indigo-500/10 blur-3xl rounded-full"></div>
-                <div class="relative bg-white rounded-3xl shadow-2xl p-2 border border-slate-100 floating">
-                    <div class="bg-slate-50 rounded-2xl p-10 flex flex-col items-center">
-                        <div class="w-full flex gap-3 mb-6">
-                            <div class="w-3 h-3 rounded-full bg-red-400"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-400"></div>
-                        </div>
-                        <div class="space-y-4 w-full">
-                            <div class="h-4 bg-slate-200 rounded-full w-3/4"></div>
-                            <div class="h-4 bg-slate-200 rounded-full w-full"></div>
-                            <div class="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border-r-4 border-indigo-500 scale-105">
-                                <i class="fas fa-search text-indigo-500"></i>
-                                <div class="text-right">
-                                    <span class="block font-bold text-indigo-900">מה זה AI?</span>
-                                    <span class="text-sm text-slate-500">אינטליגנציה מלאכותית המדמה חשיבה אנושית...</span>
-                                </div>
-                            </div>
-                            <div class="h-4 bg-slate-200 rounded-full w-5/6"></div>
-                        </div>
+            <!-- Dashboard Preview Placeholder (Clean UI) -->
+            <div class="mt-20 bg-white rounded-2xl shadow-2xl p-4 border border-gray-100 max-w-4xl mx-auto floating-animation">
+                <div class="bg-gray-50 rounded-xl p-8 flex flex-col md:flex-row gap-8 text-right">
+                    <div class="flex-1 space-y-4">
+                        <div class="h-4 w-3/4 bg-gray-200 rounded animate-pulse"></div>
+                        <div class="h-4 w-full bg-gray-200 rounded animate-pulse"></div>
+                        <div class="h-4 w-5/6 bg-blue-100 rounded"></div>
+                        <div class="h-4 w-2/3 bg-gray-200 rounded animate-pulse"></div>
+                    </div>
+                    <div class="w-full md:w-1/3 bg-white p-6 rounded-lg shadow-sm border border-blue-50">
+                        <h4 class="font-bold text-blue-600 mb-2">סיכום Tachles:</h4>
+                        <ul class="text-sm space-y-2 text-gray-600">
+                            <li><i class="fas fa-check text-green-500 ml-2"></i> שלב 1: התקנה</li>
+                            <li><i class="fas fa-check text-green-500 ml-2"></i> שלב 2: סימון טקסט</li>
+                            <li><i class="fas fa-check text-green-500 ml-2"></i> שלב 3: חסכון בזמן</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -127,93 +108,111 @@
     </section>
 
     <!-- Features -->
-    <section class="py-32 px-6 bg-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
-            <div class="p-10 rounded-3xl bg-slate-50 border border-slate-100 card-hover">
-                <div class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center shadow-lg mb-8 rotate-3">
-                    <i class="fas fa-bolt-lightning text-2xl"></i>
+    <section class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-blue-50 card-hover">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-blue-600 shadow-sm mb-6">
+                        <i class="fas fa-clock text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-900">זמן קריאה מדויק</h3>
+                    <p class="text-gray-600 leading-relaxed">מסמנים טקסט ומקבלים הערכת זמן מדויקת. לא מנחשים יותר כמה זמן ייקח לכם לקרוא את המאמר.</p>
                 </div>
-                <h3 class="text-2xl font-black mb-4 text-slate-900">מהיר וקל</h3>
-                <p class="text-slate-600 leading-relaxed text-lg font-light">התוסף לא מכביד על הדפדפן ועובד בצורה חלקה בשנייה שמתקינים. ללא הגדרות מסובכות.</p>
-            </div>
 
-            <div class="p-10 rounded-3xl bg-indigo-600 text-white card-hover shadow-xl shadow-indigo-100">
-                <div class="w-16 h-16 bg-white text-indigo-600 rounded-2xl flex items-center justify-center shadow-lg mb-8 -rotate-3">
-                    <i class="fas fa-gift text-2xl"></i>
+                <div class="p-8 rounded-3xl bg-green-50 card-hover">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-green-600 shadow-sm mb-6">
+                        <i class="fas fa-magic text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-green-900">סיכום נקודות מפתח</h3>
+                    <p class="text-gray-600 leading-relaxed">בלחיצת כפתור אחת, התוסף סורק את הדף ושולף רק את ההוראות, השלבים והקישורים הרלוונטיים.</p>
                 </div>
-                <h3 class="text-2xl font-black mb-4">חינמי לגמרי</h3>
-                <p class="opacity-90 leading-relaxed text-lg font-light">התוסף מוצע כשירות לקהילה ללא עלות, ללא מנויים וללא פרסומות מעצבנות.</p>
-            </div>
 
-            <div class="p-10 rounded-3xl bg-slate-50 border border-slate-100 card-hover">
-                <div class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center shadow-lg mb-8 rotate-3">
-                    <i class="fas fa-user-shield text-2xl"></i>
+                <div class="p-8 rounded-3xl bg-purple-50 card-hover">
+                    <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-purple-600 shadow-sm mb-6">
+                        <i class="fas fa-filter text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-purple-900">ניקוי רעשים חכם</h3>
+                    <p class="text-gray-600 leading-relaxed">התוסף מתעלם מ"תודה", "יישר כוח" ודיבורים מיותרים בפורומים, ומגיש לכם את השורה התחתונה.</p>
                 </div>
-                <h3 class="text-2xl font-black mb-4 text-slate-900">פרטיות מובטחת</h3>
-                <p class="text-slate-600 leading-relaxed text-lg font-light">אנחנו לא אוספים מידע אישי. כל הפעולות מתבצעות מקומית אצלך בדפדפן בלבד.</p>
             </div>
         </div>
     </section>
 
-    <!-- Installation -->
-    <section class="py-32 px-6 bg-slate-900 text-white relative">
+    <!-- Installation Steps -->
+    <section class="py-24 px-6 bg-gray-900 text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600 opacity-10 blur-3xl -mr-32 -mt-32"></div>
         <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-5xl font-black mb-4">איך מתקינים?</h2>
-                <p class="text-slate-400 text-xl font-light">תהליך פשוט של דקה אחת ואתם מוכנים</p>
-            </div>
+            <h2 class="text-4xl font-black mb-16 text-center">איך מתקינים ב-4 צעדים פשוטים?</h2>
             
-            <div class="space-y-8">
-                <div class="flex items-center gap-6 p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:bg-slate-800 transition-colors group">
-                    <span class="flex-shrink-0 w-12 h-12 step-number rounded-full flex items-center justify-center font-black text-xl shadow-lg group-hover:scale-110 transition-transform">1</span>
-                    <p class="text-xl font-medium">לוחצים על כפתור ההורדה הכחול בראש הדף.</p>
+            <div class="space-y-12 relative">
+                <div class="absolute right-8 top-0 bottom-0 w-0.5 bg-gray-800 hidden md:block"></div>
+                
+                <div class="flex items-start gap-8 relative">
+                    <div class="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-blue-900/50">1</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-blue-400">הורדה</h4>
+                        <p class="text-gray-400 text-lg">מורידים את קובץ ה-ZIP מהכפתור בראש הדף.</p>
+                    </div>
                 </div>
 
-                <div class="flex items-center gap-6 p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:bg-slate-800 transition-colors group">
-                    <span class="flex-shrink-0 w-12 h-12 step-number rounded-full flex items-center justify-center font-black text-xl shadow-lg group-hover:scale-110 transition-transform">2</span>
-                    <p class="text-xl font-medium">מחלצים את תוכן תיקיית ה-ZIP למקום קבוע במחשב.</p>
+                <div class="flex items-start gap-8 relative">
+                    <div class="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-blue-900/50">2</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-blue-400">חילוץ</h4>
+                        <p class="text-gray-400 text-lg">מחלצים את התיקייה מהקובץ שהורדתם למקום בטוח במחשב שלכם.</p>
+                    </div>
                 </div>
 
-                <div class="flex items-center gap-6 p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:bg-slate-800 transition-colors group">
-                    <span class="flex-shrink-0 w-12 h-12 step-number rounded-full flex items-center justify-center font-black text-xl shadow-lg group-hover:scale-110 transition-transform">3</span>
-                    <p class="text-xl font-medium">נכנסים בדפדפן לכתובת: <code class="bg-indigo-500/20 text-indigo-300 px-3 py-1 rounded-lg mx-2">chrome://extensions</code></p>
+                <div class="flex items-start gap-8 relative">
+                    <div class="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-blue-900/50">3</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-blue-400">ניהול תוספים</h4>
+                        <p class="text-gray-400 text-lg">נכנסים לכתובת <code class="bg-gray-800 px-2 py-1 rounded text-pink-400">chrome://extensions</code> בדפדפן כרום.</p>
+                    </div>
                 </div>
 
-                <div class="flex items-center gap-6 p-6 rounded-2xl bg-slate-800/50 border border-slate-700/50 hover:bg-slate-800 transition-colors group">
-                    <span class="flex-shrink-0 w-12 h-12 step-number rounded-full flex items-center justify-center font-black text-xl shadow-lg group-hover:scale-110 transition-transform">4</span>
-                    <p class="text-xl font-medium">מפעילים את <strong class="text-indigo-400">"מצב מפתח"</strong> (Developer mode) בפינה העליונה.</p>
-                </div>
-
-                <div class="flex items-center gap-6 p-8 rounded-3xl bg-indigo-600 shadow-2xl shadow-indigo-900/20 group translate-y-4">
-                    <span class="flex-shrink-0 w-14 h-14 bg-white text-indigo-600 rounded-full flex items-center justify-center font-black text-2xl shadow-lg group-hover:scale-110 transition-transform">5</span>
-                    <p class="text-xl font-black uppercase tracking-wide">לוחצים על "טען תוסף שלא נארז" ובוחרים בתיקייה!</p>
+                <div class="flex items-start gap-8 relative">
+                    <div class="flex-shrink-0 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center font-bold text-xl z-10 shadow-lg shadow-green-900/50">4</div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2 text-green-400">הפעלה</h4>
+                        <p class="text-gray-400 text-lg">מפעילים את "מצב מפתח" (Developer Mode) בפינה למעלה וגוררים את התיקייה פנימה.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-20 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="flex justify-center gap-8 mb-10">
-                <a href="https://mitmachim.top/user/%D7%99.%D7%A8.%D7%A7" class="text-slate-400 hover:text-indigo-600 transition-colors text-2xl">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="text-slate-400 hover:text-indigo-600 transition-colors text-2xl">
-                    <i class="fas fa-envelope"></i>
-                </a>
+    <!-- Detailed Features Grid -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm flex gap-6 items-center">
+                <i class="fas fa-shield-alt text-4xl text-blue-500"></i>
+                <div>
+                    <h3 class="text-xl font-bold mb-1">פרטיות מובטחת</h3>
+                    <p class="text-gray-500">אנחנו לא אוספים מידע אישי. כל הפעולות מתבצעות מקומית אצלך בדפדפן.</p>
+                </div>
             </div>
-            <p class="text-slate-500 font-bold mb-2">כל הזכויות שמורות ל-י.ר.ק &copy; 2026</p>
-            <div class="flex justify-center gap-6 text-sm text-slate-400 font-medium">
-                <a href="https://mitmachim.top/user/%D7%99.%D7%A8.%D7%A7" class="hover:text-indigo-600 underline underline-offset-4">פרופיל במתמחים טופ</a>
-                <span>|</span>
-                <span>קוד פתוח</span>
-                <span>|</span>
-                <span>גרסה 1.0.4</span>
+            <div class="bg-white p-10 rounded-3xl border border-gray-100 shadow-sm flex gap-6 items-center">
+                <i class="fas fa-hand-holding-heart text-4xl text-red-500"></i>
+                <div>
+                    <h3 class="text-xl font-bold mb-1">חינמי לגמרי</h3>
+                    <p class="text-gray-500">התוסף מוצע כשירות ללא עלות, ללא פרסומות וללא "מנויי פרימיום".</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-500 mb-4">כל הזכויות שמורות ל-י.ר.ק &copy; 2026</p>
+            <div class="flex justify-center gap-6">
+                <a href="https://mitmachim.top/user/%D7%99.%D7%A8.%D7%A7" class="text-blue-600 hover:underline">פרופיל במתמחים טופ</a>
+                <a href="#" class="text-gray-400 hover:text-gray-600">תנאי שימוש</a>
+                <a href="#" class="text-gray-400 hover:text-gray-600">פרטיות</a>
             </div>
         </div>
     </footer>
 
-    <footer style="text-align: center; padding: 15px; font-size: 12px; color: #888; width: 100%; border-top: 1px solid #eee; margin-top: 20px; font-family: sans-serif;">פותח על ידי אברהם העברי 2026 כל הזכויות שמורות &copy;</footer>
+<footer style="text-align: center; padding: 15px; font-size: 12px; color: #888; width: 100%; border-top: 1px solid #eee; margin-top: 20px; font-family: sans-serif;">פותח על ידי אברהם העברי 2026 כל הזכויות שמורות &copy;</footer>
 </body>
 </html>
